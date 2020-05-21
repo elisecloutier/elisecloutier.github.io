@@ -1,0 +1,130 @@
+/* Style sheet
+   color picker www.w3schools.com/colors/colors_picker.asp
+*/
+
+html {
+  background-color: #BDCED6;
+}
+
+body {
+  background-color: #BDCED6;
+  width: 800px;
+  padding: 0px 20px 20px 20px;
+  align: center;
+  font-family: Arial;
+
+}
+
+hr {
+  height: 2px;
+  border-width: 0;
+  color: gray;
+  background-color: gray;
+}
+
+h1 {
+	font-size: 30px;
+  font-family: Arial;
+	text-align: center;
+	margin: 0;
+	padding: 20px 0;
+	color: #444155;
+}
+
+h2 {
+	font-size: 20px;
+  font-family: Arial;
+	text-align: left;
+	padding: 20px 0;
+	color: #444155;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+  align: center;
+}
+
+p {
+  color: black;
+  font-family: Arial;
+}
+
+label {
+  color: black;
+  font-family: Arial;
+}
+
+
+
+/* Defining styling for a specific element type - each question */
+.question {
+  color: black;
+  margin: 20px;
+}
+
+/* Defining styling for a specific element type - large block buttons */
+.block {
+  display: block;
+  width: 40%;
+  border: none;
+  background-color: #453B49;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+  color: white;
+  margin: auto;
+  display: block;
+}
+
+/* Defining styling for a specific element with an id */
+#signature {
+  text-align: center;
+  color: black;
+  font-style: italic;
+  font-size: 75%;
+}
+
+.wrap {
+  font-family:Arial;
+  font-size: 16px;
+}
+
+.likert {
+  list-style: none;
+  width: 100%;
+  margin: 0;
+  padding: 0 0 35px;
+  display: block;
+  border-bottom: 2px solid #efefef;
+}
+.likert:last-of-type {
+  border-bottom: 0;
+}
+
+.likert:before {
+  content: '';
+  position: relative;
+  left: 9.5%;
+  top: 11px;
+  display: block;
+  background-color: #444155;
+  height: 4px;
+  width: 76%;
+}
+.likert li {
+  display: inline-block;
+  width: 19%;
+  text-align: left;
+  vertical-align: top;
+  float: left;
+  list-style-type: none;
+}
+.likert li input[type=radio] {
+  display: block;
+  position: relative;
+  left: 50%;
+  margin-left: -6px;
+
+}

@@ -1,1 +1,101 @@
-Hello World
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+	<link href="styles/style.css" rel="stylesheet" type="text/css">
+    <title>Questionnaire</title>
+  </head>
+
+  <body>
+	<h1>YOUR URBAN OUTFITTERS EXPERIENCE</h1>
+	<form id="myform" action="index.php" >
+  <hr>
+	<h2>We would love to know more about your experience visiting the <a href="https://www.urbanoutfitters.com">Urban Outfitters</a> site!</h2>
+	<a href="https://www.urbanoutfitters.com">
+	<img src="images/pic.png" alt="https://www.urbanoutfitters.com" width="800" height="400"></a>
+
+  <br>
+
+	<div class="question">
+  <p> Before we get started, please fill out the personal information section. </p>
+	<h2>Personal Information</h2>
+	<p>First name: <input type="text" name="firstname"></p>
+	<p>Last name: <input type="text" name="lastname"></p>
+  <p>Email: <input type="text" name="email"></p>
+  <p>Phone number: <input type="text" name="phonenumber"></p>
+
+  </div>
+
+  <div class="question">
+		<ol><h2><li> Which other clothing online stores have you visited in the past? </li></h2>
+		<input type="checkbox" name="Stores" value="Zara"> Zara<br>
+		<input type="checkbox" name="Stores" value="PLT"> Pretty Little Thing<br>
+		<input type="checkbox" name="Stores" value="Missguided"> Missguided<br>
+		<input type="checkbox" name="Stores" value="Weekday"> Weekday<br>
+    <input type="checkbox" name="Stores" value="F21"> Forever 21<br>
+
+		<h2><li>Overall, how would you rate the Urban Outfitters website?</li><h2>
+		<select id="rate">
+			<option value="Excellent" selected="selected">Excellent</option>
+			<option value="Good">Good</option>
+			<option value="Average">Average</option>
+      <option value="Poor">Poor</option>
+      <option value="Terrible">Terrible</option>
+		</select>
+
+    <h2><li>How likely is it that you could recommend our website to a friend?</li></h2>
+    <input type="radio" id="vlikely">
+    <label for="vlikely">Very likely</label><br>
+    <input type="radio" id="likely">
+    <label for="likely">Likely</label><br>
+    <input type="radio" id="unlikely">
+    <label for="unlikely">Unlikey</label>
+
+    <h2><li>How important is it that a store representative be available online to answer questions directly through a chatbox?</li></h2>
+    <div class="wrap">
+      <label class="likert"></label>
+      <ul class='likert'>
+        <li>
+          <input type="radio" name="likert" value="strong_agree">
+          <label>Strongly agree</label>
+        </li>
+        <li>
+          <input type="radio" name="likert" value="strong_agree">
+          <label>Agree</label>
+        </li>
+        <li>
+          <input type="radio" name="likert" value="strong_agree">
+          <label>Neutral</label>
+        </li>
+        <li>
+          <input type="radio" name="likert" value="disagree">
+          <label>Disagree</label>
+        </li>
+        <li>
+          <input type="radio" name="likert" value="strong_agree">
+          <label>Strongly disagree</label>
+        </li>
+      </ul>
+
+      </ol>
+	</div>
+
+
+	<br>
+	<br>
+  <div class="question">
+	<h2> Please feel free to share any comments you might have about your experience at <a href="https://www.urbanoutfitters.com">Urban Outfitters!</a> </h2>
+	<textarea rows="5" cols="30"></textarea>
+</div>
+	<br>
+	<br>
+
+	<button id="submitButton" type="button" class="block">
+		Submit your questionnaire
+	</button>
+  <br>
+	<p id="signature">Site created by Elise Cloutier</p>
+
+	</form>
+  </body>
+</html>
