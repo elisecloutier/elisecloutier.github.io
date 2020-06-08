@@ -1,35 +1,32 @@
 
-// This function is called when any of the tab is clicked
-// It is adapted from https://www.w3schools.com/howto/howto_js_tabs.asp
+// It is adapted from https://www.w3schools.com/howto/howto_js_accordion.asp
+var acc = document.getElementsByClassName("accordion");
+var i;
 
-function openInfo(evt, tabName) {
+for (i = 0; i < acc.length; i++) {
+acc[i].addEventListener("click", function() {
+	/* Toggle between adding and removing the "active" class,
+	to highlight the button that controls the panel */
+	this.classList.toggle("active");
 
-	// Get all elements with class="tabcontent" and hide them
-	tabcontent = document.getElementsByClassName("tabcontent");
-	for (i = 0; i < tabcontent.length; i++) {
-		tabcontent[i].style.display = "none";
+	/* Toggle between hiding and showing the active panel */
+	var panel = this.nextElementSibling;
+	if (panel.style.display === "block") {
+		panel.style.display = "none";
+	} else {
+		panel.style.display = "block";
 	}
-
-	// Get all elements with class="tablinks" and remove the class "active"
-	tablinks = document.getElementsByClassName("tablinks");
-	for (i = 0; i < tablinks.length; i++) {
-		tablinks[i].className = tablinks[i].className.replace(" active", "");
-	}
-
-	// Show the current tab, and add an "active" class to the button that opened the tab
-	document.getElementById(tabName).style.display = "block";
-	evt.currentTarget.className += " active";
-
+});
 }
 
-// generate a checkbox list from a list of products
-// it makes each product name as the label for the checkbox
 
 function populateListProductChoices() {
+
 
 	console.log("test");
 
 var checkboxes = diet.getElementsByTagName("input");
+console.log(checkboxes);
 
 var restrictions = [];
 
@@ -55,8 +52,73 @@ var optionArray = restrictListProducts(products, restrictions);
 
 console.log(optionArray);
 
+var para = document.createElement("P");
+para.innerHTML = "Here are the products we offer : ";
+para.appendChild(document.createElement("br"));
+para.appendChild(document.createElement("br"));
+
+var pro = document.getElementById('displayProduct');
+pro.innerHTML = "";
+
+var radio = categories.getElementsByTagName("input");
+console.log(radio);
+var checked;
+for (i=0; i<radio.length; i++) {
+	if (categories.getElementsByTagName("input")[i].checked){
+		checked = categories.getElementsByTagName("input")[i].value;
+	}
+}
+console.log(checked);
+
+//check which category has been chosen and display products based on selected cateogory
+for (i=0; i<optionArray.length; i++) {
+	if (optionArray[i].categorie == checked) {
+		var image = document.createElement("img");
+		image.src = optionArray[i].image;
+		image.className = "productImage"
+		para.appendChild(image);
+		para.appendChild(document.createElement("br"));
+
+		// create the checkbox and add in HTML DOM
+		var checkbox = document.createElement("input");
+		checkbox.type = "checkbox";
+		checkbox.name = "product";
+		console.log(optionArray[i]);
+		checkbox.value = optionArray[i].name;
+		checkbox.price = optionArray[i].price;
+		para.appendChild(checkbox);
+		console.log(checkbox);
+
+		// create a label for the checkbox, and also add in HTML DOM
+		var label = document.createElement('label')
+		label.htmlFor = optionArray[i];
+		label.appendChild(document.createTextNode(optionArray[i].name + " ($" + optionArray[i].price + ")"));
+		para.appendChild(label);
+
+		// create a breakline node and add in HTML DOM
+		para.appendChild(document.createElement("br"));
+		console.log(para);
+		para.appendChild(document.createElement("br"));
+		para.appendChild(document.createElement("br"));
+
+
+	}
+}
+pro.appendChild(para);
 
 }
+
+function show_image(src, width, height, alt) {
+    var img = document.createElement("img");
+    img.src = src;
+    img.width = width;
+    img.height = height;
+    img.alt = alt;
+
+    // This next line will just add it to the <body> tag
+    document.appendChild(img);
+}
+
 
 
 // This function is called when the "Add selected items to cart" button in clicked
@@ -66,6 +128,7 @@ console.log(optionArray);
 function selectedItems(){
 
 	var ele = document.getElementsByName("product");
+	console.log(ele);
 	var chosenProducts = [];
 
 	var c = document.getElementById('displayCart');
@@ -78,6 +141,7 @@ function selectedItems(){
 	for (i = 0; i < ele.length; i++) {
 		if (ele[i].checked) {
 			para.appendChild(document.createTextNode(ele[i].value));
+			console.log(ele[i].value);
 			para.appendChild(document.createElement("br"));
 			chosenProducts.push(ele[i].value);
 		}

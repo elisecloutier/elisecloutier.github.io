@@ -8,24 +8,18 @@
 
 <body>
 
-<!-- Tab links, each one with an onclick event associated with it -->
-<div class="tab">
-	<button class="tablinks" onClick="openInfo(event, 'Home');"><img src='images/logo.png'></button>
-  <button class="tablinks" onclick="openInfo(event, 'Client');">Client</button>
-  <button class="tablinks" onclick="openInfo(event, 'Products');">Products</button>
-  <button class="tablinks" onclick="openInfo(event, 'Cart');">Cart</button>
-</div>
-
-<div  id="Home" class='tabcontent'>
+<button class="accordion"><img src='images/logo.png'></button>
+<div  id="Home" class='panel'>
 	<h1>Refine your search to make your shopping experience more enjoyable!</h1>
 	<p>Providing a tailored shopping experience is our priority.</p>
 	<img src="https://ichef.bbci.co.uk/wwfeatures/live/1280_720/images/live/p0/8b/m4/p08bm45x.jpg" alt='Food' class='image'>
 </div>
 
-<div id="Client" class="tabcontent">
+<button class="accordion">Diet plan</button>
+<div id="Client" class="panel">
   <h3>Here at Food & Friends, we aim to provide our clients with the most personalized shopping experience.</h3>
   <p>Please select your prefered diet plan:<p>
-	<form id="diet" name="diet">
+	<form id="diet" name="diet" class="forms">
 	<input type="checkbox" name="option1" value="Vegetarian">
 	<label for="option1"> Vegetarian diet</label>
 	<br>
@@ -48,33 +42,34 @@
 <button id="selection" type="button" class="block" onclick="populateListProductChoices()">See selected products</button>
 </div>
 
-<div id="cat" class="tabcontent">
-		<input type="radio" id="vegetables" name="foodType" value="1" checked onclick="populateListProductChoices();">
-		<label for="everything">Vegetables</label>
-		<input type="radio" id="wheat" name="foodType" value="2" onclick="populateListProductChoices();">
-		<label for="drink">Wheat</label>
-		<input type="radio" id="drinks" name="foodType" value="3" onclick="populateListProductChoices();">
-		<label for="snack">Drinks</label>
-		<input type="radio" id="dairy" name="foodType" value="4" onclick="populateListProductChoices();">
-		<label for="meal">Dairy</label>
-		<input type="radio" id="meat" name="foodType" value="5" onclick="populateListProductChoices();">
-		<label for="meal">Meat & Fish</label>
-</div>
-
-<div id="Products" class="tabcontent">
+<button class="accordion">Products</button>
+<div id="Products" class="panel">
   <h3>Your targeted products</h3>
   <p>We preselected products based on your restrictions.</p>
-	 <p>Choose items to buy:</p>
+	 <p>Choose a category:</p>
+	 <form id="categories" name="categories" class="forms">
+	 <input type="radio" id="vegetables" name="foodType" value="1" checked onclick="populateListProductChoices();">
+	 <label for="everything">Vegetables</label>
+	 <input type="radio" id="wheat" name="foodType" value="2" onclick="populateListProductChoices();">
+	 <label for="drink">Wheat</label>
+	 <input type="radio" id="drinks" name="foodType" value="3" onclick="populateListProductChoices();">
+	 <label for="snack">Drinks</label>
+	 <input type="radio" id="dairy" name="foodType" value="4" onclick="populateListProductChoices();">
+	 <label for="meal">Dairy</label>
+	 <input type="radio" id="meat" name="foodType" value="5" onclick="populateListProductChoices();">
+	 <label for="meal">Meat & Fish</label>
 	 <div id="displayProduct"></div>
+	 </form>
 	 <br>
-	 <button id="addCart" type="button" class="block" onclick="openInfo(event, 'Cart');" onclick="selectedItems()">
+	 <button id="addCart" type="button" class="block" onclick="selectedItems()">
 		Add selected items to cart
 	</button>
 </div>
 
-<div id="Cart" class="tabcontent">
+<button class="accordion">Cart</button>
+<div id="Cart" class="panel">
   <h3>Cart</h3>
-  <p>Here is your cart.</p>
+  <p>Here are the items in your cart:</p>
   <div id="displayCart"></div>
 </div>
 

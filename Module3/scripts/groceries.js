@@ -44,7 +44,7 @@ var products = [
 		lactose: true,
 		organic: false,
 		price: 2.35,
-		image: "https://upload.wikimedia.org/wikipedia/commons/c/c7/Korb_mit_Brötchen.JPG",
+		image: "https://www.kingarthurflour.com/sites/default/files/styles/featured_image/public/recipe_legacy/1496-3-large.jpg?itok=STBbaJp5",
 		categorie: 2
 	},
 	{
