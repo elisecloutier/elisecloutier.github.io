@@ -22,7 +22,6 @@ function openInfo(evt, tabName) {
 
 }
 
-
 // generate a checkbox list from a list of products
 // it makes each product name as the label for the checkbox
 
@@ -56,66 +55,9 @@ var optionArray = restrictListProducts(products, restrictions);
 
 console.log(optionArray);
 
-var radiobutton = document.createElement("input");
-radiobutton.setAttribute("type", "radio");
 
-for (i=0; i<optionArray; i++)
-{
-	 if (optionArray[i][0] == 1)
-	 {
-		 // pass to html in veg catergry
-	 }
-	 if (optionArray[i][0] == 1)
-	 {
-		 // pass as wheat
-	 }
-	 if (optionArray[i][0] == 1)
-	 {
-		 //drinks
-	 }
-	 if (optionArray[i][0] == 1)
-	 {
-		 //dairy
-	 }
-	 if (optionArray[i][0] == 1)
-	 {
-		 //meat
-	 }
 }
-// for each item in the array, create a checkbox element, each containing information such as:
-// <input type="checkbox" name="product" value="Bread">
-// <label for="Bread">Bread/label><br>
 
-for (i = 0; i < optionArray.length; i++) {
-
-	var productName = optionArray[i].name;
-
-	// create the checkbox and add in HTML DOM
-	var checkbox = document.createElement("input");
-	checkbox.type = "checkbox";
-	checkbox.name = "product";
-	checkbox.value = productName;
-	checkbox.addEventListener("click", selectItems);
-	productEntry.appendChild(checkbox);
-
-	// create a label for the checkbox, and also add in HTML DOM
-	var label = document.createElement('label')
-	label.htmlFor = productName;
-	label.appendChild(document.createTextNode(productName));
-			productEntry.appendChild(label);
-
-			productEntry.appendChild(document.createElement("br"));
-			productEntry.appendChild(document.createElement("br"));
-
-			// add image
-			var image = document.createElement("img");
-			image.src = optionArray[i].image;
-			image.className = "productImage"
-			productEntry.appendChild(image);
-
-			productDisplay.appendChild(productEntry);
-}
-}
 
 // This function is called when the "Add selected items to cart" button in clicked
 // The purpose is to build the HTML to be displayed (a Paragraph)
