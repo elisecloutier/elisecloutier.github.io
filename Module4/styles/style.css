@@ -1,0 +1,48 @@
+/* Style sheet
+   color picker www.w3schools.com/colors/colors_picker.asp
+*/
+
+/* Bootstrap default font-family is Helvetica Neue */
+h1 {
+  font-family: Arial;
+
+}
+
+h3 {
+  font-family: Arial;
+  color: black;
+}
+
+.container-md {
+  font-family: Arial;
+  color: black;
+}
+
+/*https://www.w3schools.com/howto/howto_css_image_center.asp*/
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 150px;
+  height: 150px;
+}
+
+.container-fluid{
+  background-color: #D0C0BD;
+}
+
+.container-md {
+  background-color: #D0C0BD;
+}
+
+.table {
+  background-color: #B1AEC3;
+}
+
+.btn {
+  background-color: #B1AEC3;
+}
+
+.btn:hover {
+  color: #D0C0BD;
+}
