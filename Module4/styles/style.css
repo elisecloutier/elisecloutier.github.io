@@ -48,8 +48,12 @@ h3 {
 }
 
 .btn-light {
-  background-color: #D0C0BD;
+  background-color: #B1AEC3;
   text-align: center;
+}
+
+.btn-lg{
+  background-color: #D0C0BD;
 }
 
 .button:hover {
