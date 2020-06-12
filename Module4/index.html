@@ -61,14 +61,31 @@
     </div>
 
     <!-- When you have messages to tell, remember that center align is not always the best choice -->
-    <div class="container-md p-3 my-3 border text-dark">
+    <!--Images taken from https://www.lorealparis.ca/en/, https://www.stylesalute.com/10-examples-of-dark-brown-hair-with-highlights/, https://www.wmagazine.com/story/temporary-hair-color-guide-manic-panic/ and http://www.cassandrakennedy.com/wedding-hairstyles/-->
+    <div class="container-fluid p-3 my-3 border text-dark">
         <h3>Services we offer: </h3>
         <br>
         <ul>
           <li>Haircut & styling</li>
+          <br>
+          <img src='images/styling.jpg' class="left" width="150px" height="150px">
+          <br>
+          <br>
           <li>Highlights</li>
+          <br>
+          <img src='images/highlights.jpg' class="left" width="150px" height="150px">
+          <br>
+          <br>
           <li>Hair colouring</li>
+          <br>
+          <img src='images/colouring.jpg' class="left" width="150px" height="180px">
+          <br>
+          <br>
           <li>Special events</li>
+          <br>
+          <img src='images/events.jpg' class="left" width="150px" height="200px">
+          <br>
+          <br>
         </ul>
     </div>
 
@@ -76,7 +93,6 @@
     <!-- Might be (or not) useful to show some information to the user -->
     <div class="container">
         <h2>Service description</h2>
-        <p>Here is a list of services offered</p>
         <table class="table table-hover">
             <thead>
             <tr>
@@ -98,7 +114,7 @@
             </tr>
             <tr>
                 <td>Coloring</td>
-                <td>Bla bla</td>
+                <td>Want to switch up your hair colour? We have over 100 different tones to match your dream hair!</td>
                 <td>$190+</td>
             </tr>
             </tbody>
@@ -110,55 +126,6 @@
     <!-- These can be useful for making sure someone reads something before continuing -->
 
 
-    <!-- You'll certainly need buttons at some point in your site -->
-    <!-- https://www.w3schools.com/bootstrap4/bootstrap_buttons.asp -->
-    <!-- Remember how we talked about choosing a hue and changing the saturation for active/inactive -->
-    <!-- This idea is already part of the components in Bootstrap -->
-    <div class="container">
-        <h2>Button States</h2>
-        <button type="button" class="btn btn-warning">Primary Button</button>
-        <button type="button" class="btn btn-warning active">Active Primary</button>
-        <button type="button" class="btn btn-warning" disabled>Disabled Primary</button>
-    </div>
-
-
-    <!-- Including a modal https://www.w3schools.com/bootstrap4/bootstrap_modal.asp -->
-    <!-- Modals are useful for additional information or questions -->
-    <!-- Here the modal is used for a little survey -->
-    <div class="container">
-        <h2>Modal Example</h2>
-        <!-- Trigger the modal with a button -->
-        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#mySurvey">Open Survey</button>
-
-        <!-- Modal -->
-        <div class="modal fade" id="mySurvey" role="dialog">
-            <div class="modal-dialog">
-            <!-- Modal content-->
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                </div>
-                <div class="modal-body">
-                    <div class="container">
-                        <h2>How did you hear about us?</h2>
-                        <p>Tell us:</p>
-                        <form>
-                          <div class="checkbox">
-                            <label><input type="checkbox" value="">Option 1</label>
-                          </div>
-                          <div class="checkbox">
-                            <label><input type="checkbox" value="">Option 2</label>
-                          </div>
-                        </form>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                </div>
-            </div>
-        </div>
-        </div>
-    </div>
 
     <!-- Presenting the staff with cards: https://www.w3schools.com/bootstrap4/bootstrap_cards.asp -->
     <!-- Card columns allows multiple cards next to each other -->
@@ -190,33 +157,11 @@
         </div>
     </div>
 
-
-    <!-- A different approach would be to make the whole staff information collapsible -->
-    <!-- Here a block button (taking the full width) opens/closes the collapsible -->
-    <!-- Here a single card is used, but card columns could be used -->
-    <div class="container">
-        <h2>More information</h2>
-        <a href="#mechanics" class="btn btn-primary btn-block" data-toggle="collapse">Meet our mechanics</a>
-        <div id="mechanics" class="collapse">
-            <div class="card bg-warning" style="width:200px">
-                <img class="card-img-top" src="images/Erwind.jpg" alt="Card image" style="width:100%">
-                <div class="card-body">
-                    <h4 class="card-title">Erwind</h4>
-                    <p class="card-text">Erwind knows all about bikes.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
     <!-- Collapsible with multiple items - accordion -->
     <!-- https://www.w3schools.com/bootstrap4/bootstrap_collapse.asp -->
     <!-- As we want to do a vertical navigation better suited for mobile design, an accordion pattern -->
     <!-- could work well.  You can use other patterns too.  This is just an example. -->
     <div class="container">
-        <div class="container-md p-3 my-3 border bg-warning text-white">
-            <h1>Erwind's and friends bike shop</h1>
-            <p>Bike fixing is our business</p>
-        </div>
         <div id="accordion">
             <div class="card">
                 <div class="card-header">
@@ -256,6 +201,44 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
+
+    <!-- Including a modal https://www.w3schools.com/bootstrap4/bootstrap_modal.asp -->
+    <!-- Modals are useful for additional information or questions -->
+    <!-- Here the modal is used for a little survey -->
+    <div class="container">
+        <h2>Modal Example</h2>
+        <!-- Trigger the modal with a button -->
+        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#mySurvey">Open Survey</button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="mySurvey" role="dialog">
+            <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <h2>How did you hear about us?</h2>
+                        <p>Tell us:</p>
+                        <form>
+                          <div class="checkbox">
+                            <label><input type="checkbox" value="">  Online</label>
+                          </div>
+                          <div class="checkbox">
+                            <label><input type="checkbox" value="">  Friend/family</label>
+                          </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
         </div>
     </div>
 
