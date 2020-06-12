@@ -63,8 +63,10 @@
     <!-- When you have messages to tell, remember that center align is not always the best choice -->
     <!--Images taken from https://www.lorealparis.ca/en/, https://www.stylesalute.com/10-examples-of-dark-brown-hair-with-highlights/, https://www.wmagazine.com/story/temporary-hair-color-guide-manic-panic/ and http://www.cassandrakennedy.com/wedding-hairstyles/-->
     <div class="container-fluid p-3 my-3 border text-dark">
-        <h3>Services we offer: </h3>
-        <br>
+      <div class="ti">
+      <h2>Services we offer </h2>
+      </div>
+      <br>
         <ul>
           <li>Haircut & styling</li>
           <br>
@@ -93,6 +95,7 @@
     <!-- Might be (or not) useful to show some information to the user -->
     <div class="container">
         <h2>Service description</h2>
+        <br>
         <table class="table table-hover">
             <thead>
             <tr>
@@ -131,26 +134,31 @@
     <!-- Card columns allows multiple cards next to each other -->
     <!-- The first card's button doesn't go anywhere, it could be a modal -->
     <!-- My second card limits the information seen and uses collapsible to show more -->
+    <!--Images taken from https://www.today.com/series/holidays-made-easy/guide-holiday-tipping-what-give-your-hairdresser-doorman-others-t60476 and https://www.mentalfloss.com/article/86078/13-behind-scenes-secrets-hairdressers-->
     <div class="container p-3">
         <h2>Meet our hairdressers</h2>
+        <br>
         <div class="card-columns">
-            <div class="card bg-warning" style="width:200px">
-                <img class="card-img-top" src="images/Jule.jpg" alt="Card image" style="width:100%">
+            <div class="card card-mx-auto" style="width:300px">
+                <img class="card-img-top" src="images/worker1.jpg" alt="Card image" style="width:100%">
                 <div class="card-body">
-                    <h4 class="card-title">Jules</h4>
-                    <p class="card-text">Jules has been cutting hair for 10 years.</p>
-                    <a href="#" class="btn btn-primary">See Profile</a>
+                    <h4 class="card-title">Catrina</h4>
+                    <p class="card-text">With over 10 years experience and a certificaiton from Ontario College of Trades, Catrina specializes in finding the perfect new colour for your hair!</p>
+                    <a href="#profile1" class="btn btn-light" data-toggle="collapse">See Profile</a>
+                    <div id="profile1" class="collapse p-3">
+                        <p>With an eye for colour, she will rejuvinate your face by finding the perfect new hairstyle for you!</p>
+                    </div>
                 </div>
             </div>
-            <div class="card bg-danger" style="width:200px">
-                <img class="card-img-top" src="images/Jule.jpg" alt="Card image" style="width:100%">
+            <div class="card card-mx-auto" style="width:300px">
+                <img class="card-img-top" src="images/worker2.jpg" alt="Card image" style="width:100%">
                 <div class="card-body">
-                    <h4 class="card-title">Jules</h4>
-                    <p class="card-text">The curly hair specialist</p>
+                    <h4 class="card-title">Maxime</h4>
+                    <p class="card-text">Maxime styles hair for any occasion! He offers hairdos with accessories too.</p>
                     <!-- collapsible part -->
-                    <a href="#profile" class="btn btn-primary" data-toggle="collapse">See Profile</a>
-                    <div id="profile" class="collapse p-3">
-                        <p>Jules has been cutting hair for 10 years ... </p>
+                    <a href="#profile2" class="btn btn-light" data-toggle="collapse">See Profile</a>
+                    <div id="profile2" class="collapse p-3">
+                        <p>Having worked in hair salons in over 10 different countries, Maxime has a flair for elegant hairstyles for the nights you won't want to forget.</p>
                     </div>
                 </div>
             </div>
@@ -162,6 +170,8 @@
     <!-- As we want to do a vertical navigation better suited for mobile design, an accordion pattern -->
     <!-- could work well.  You can use other patterns too.  This is just an example. -->
     <div class="container">
+      <h2>Book your appointment</h2>
+      <br>
         <div id="accordion">
             <div class="card">
                 <div class="card-header">
@@ -170,6 +180,23 @@
                 <div id="collapseService" class="collapse show" data-parent="#accordion">
                     <div class="card-body">
                         <p>Here is our list of services</p>
+                        <form id="services" class="forms">
+                      	<input type="checkbox" name="option1" value="Haircut">
+                      	<label for="option1"> Haitcut</label>
+                      	<br>
+                      	<input type="checkbox" name="option2" value="Styling">
+                      	<label for="option2"> Styling</label>
+                      	<br>
+                      	<input type="checkbox" name="option3" value="Highlights">
+                      	<label for="option3"> Highlights</label>
+                      	<br>
+                      	<input type="checkbox" name="option4" value="Colouring">
+                      	<label for="option4"> Colouring</label>
+                      	<br>
+                      	<input type="checkbox" name="option5" value="SpecialEvents">
+                      	<label for="option5"> Special events</label>
+                      	<br>
+                      </form>
                     </div>
                 </div>
             <div class="card">
@@ -178,26 +205,55 @@
                 </div>
                 <div id="collapseDate" class="collapse" data-parent="#accordion">
                     <div class="card-body">
-                        <p>What date?</p>
-                        <!-- Bootstrap has various input components. Some examples are given here: -->
-                        <!-- Component shown here: https://v4-alpha.getbootstrap.com/components/forms/#textual-inputs -->
+                        <p>What date and time suits you the most?</p>
+                        <!-- Component used: https://v4-alpha.getbootstrap.com/components/forms/#textual-inputs -->
                         <div class="form-group row">
-                            <label for="dateTimeInput" class="col-2 col-form-label">Date and time</label>
-                            <div class="col-10">
-                                <input class="form-control" type="datetime-local" value="2011-08-19T13:45:00" id="dateTimeInput">
-                            </div>
+                          <label for="example-date-input" class="col-2 col-form-label">Date</label>
+                          <div class="col-10">
+                            <input class="form-control" type="date" value="2011-08-19" id="example-date-input">
+                          </div>
+                        </div>
+                        <div class="form-group row">
+                          <label for="example-time-input" class="col-2 col-form-label">Time</label>
+                          <div class="col-10">
+                            <input class="form-control" type="time" value="13:45:00" id="example-time-input">
+                          </div>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="card">
                 <div class="card-header">
-                    <a class="collapsed card-link" data-toggle="collapse" href="#collapseClientInfo">Your info</a>
+                    <a class="collapsed card-link" data-toggle="collapse" href="#collapseClientInfo">Your contact information</a>
                 </div>
                 <div id="collapseClientInfo" class="collapse" data-parent="#accordion">
                     <div class="card-body">
-                        <p>Your information so we can contact you</p>
-                        <p>Form to enter name, email, phone</p>
+                        <p>Please provide your contact information below.</p>
+                        <!-- Component used: https://v4-alpha.getbootstrap.com/components/forms/#textual-inputs -->
+                        <div class="form-group row">
+                          <label for="example-text-input" class="col-2 col-form-label">First name</label>
+                          <div class="col-10">
+                            <input class="form-control" type="text"  id="example-text-input">
+                          </div>
+                        </div>
+                        <div class="form-group row">
+                          <label for="example-text-input" class="col-2 col-form-label">Last name</label>
+                          <div class="col-10">
+                            <input class="form-control" type="text"  id="example-text-input">
+                          </div>
+                        </div>
+                        <div class="form-group row">
+                          <label for="example-email-input" class="col-2 col-form-label">Email</label>
+                          <div class="col-10">
+                            <input class="form-control" type="email" id="example-email-input">
+                          </div>
+                        </div>
+                        <div class="form-group row">
+                          <label for="example-tel-input" class="col-2 col-form-label">Phone number</label>
+                          <div class="col-10">
+                            <input class="form-control" type="tel" id="example-tel-input">
+                          </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -208,10 +264,13 @@
     <!-- Modals are useful for additional information or questions -->
     <!-- Here the modal is used for a little survey -->
     <div class="container">
-        <h2>Modal Example</h2>
+        <br>
+        <h2>Please rate your experience at Bouclettes</h2>
+        <br>
         <!-- Trigger the modal with a button -->
-        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#mySurvey">Open Survey</button>
-
+        <div class="row justify-content-center">
+        <button type="button" class="btn btn-light btn-lg" data-toggle="modal" data-target="#mySurvey">Survey</button>
+        </div>
         <!-- Modal -->
         <div class="modal fade" id="mySurvey" role="dialog">
             <div class="modal-dialog">
@@ -222,16 +281,17 @@
                 </div>
                 <div class="modal-body">
                     <div class="container">
-                        <h2>How did you hear about us?</h2>
-                        <p>Tell us:</p>
-                        <form>
-                          <div class="checkbox">
-                            <label><input type="checkbox" value="">  Online</label>
-                          </div>
-                          <div class="checkbox">
-                            <label><input type="checkbox" value="">  Friend/family</label>
-                          </div>
-                        </form>
+                        <h2>How would you rate your experience?</h2>
+                        <br>
+                        <label for="rating">Tell us:</label>
+                        <select name="ratin" id="rating">
+                          <option value="excellent">Excellent</option>
+                          <option value="vgood">Very good</option>
+                          <option value="good">Good</option>
+                          <option value="average">Average</option>
+                          <option value="average">Bad</option>
+                          <option value="average">Terrible</option>
+                        </select>
                     </div>
                 </div>
                 <div class="modal-footer">
@@ -240,6 +300,12 @@
             </div>
         </div>
         </div>
+    </div>
+
+    <div class="ti">
+      <br>
+    <h2>We hope to see you soon!</h2>
+    <br>
     </div>
 
 </body>

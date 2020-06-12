@@ -31,6 +31,10 @@ h3 {
   background-color: #D0C0BD;
 }
 
+.ti {
+  text-align: center;
+}
+
 .container-md {
   background-color: #D0C0BD;
 }
@@ -43,6 +47,35 @@ h3 {
   background-color: #B1AEC3;
 }
 
+.btn-light {
+  background-color: #D0C0BD;
+  text-align: center;
+}
+
 .button:hover {
   color: #D0C0BD;
+}
+
+.card {
+  background-color: #D0C0BD;
+}
+
+.card-link {
+  color: black;
+}
+
+.card-header {
+  background-color: #B1AEC3;
+}
+
+.modal-header {
+  background-color: #B1AEC3;
+}
+
+.modal-body {
+  background-color: #D0C0BD;
+}
+
+.modal-footer {
+  background-color: #B1AEC3;
 }
