@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Questionnaire</title>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<link href="https://fonts.googleapis.com/css?family=Raleway:400,800&display=swap" rel="stylesheet">
+	 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+</head>
+<body style="background-color:white;margin: 1.5%;">
+	<div class="jumbotron" style="text-align: center; text-transform: uppercase;">
+  <h1 class="display-4">YOUR URBAN OUTFITTERS EXPERIENCE</h1>
+</div>
+	</br>
+	</br>
+	<div>
+		<form >
+		<div class="jumbotron">
+			<h1>We would love to know more about your experience visiting the <a href="https://www.urbanoutfitters.com">Urban Outfitters</a> site!</h1>
+			<br>
+			<a href="https://www.urbanoutfitters.com">
+			<img src="images/pic.png" alt="https://www.urbanoutfitters.com" width="800" height="400"></a>
+			<br>
+			<br>
+
+		<p> Before we get started, please fill out the personal information section. </p>
+		<h2>Personal Information</h2>
+		<p>First name: <input type="text" name="first"></p>
+		<p>Last name: <input type="text" name="last"></p>
+		<p>Email: <input type="text" name="email"></p>
+		<p>Phone number: <input type="text" name="phone"></p>
+
+		<div class="question">
+			<ol><h2><li> Which other clothing online stores have you visited in the past? </li></h2>
+			<input type="checkbox" name="stores" value="Zara"> Zara<br>
+			<input type="checkbox" name="stores" value="PLT"> Pretty Little Thing<br>
+			<input type="checkbox" name="stores" value="Missguided"> Missguided<br>
+			<input type="checkbox" name="stores" value="Weekday"> Weekday<br>
+			<input type="checkbox" name="stores" value="F21"> Forever 21<br>
+			<br>
+
+			<h2><li>Overall, how would you rate the Urban Outfitters website?</li><h2>
+			<select id="rate" name="rate">
+				<option value="Excellent" selected="selected">Excellent</option>
+				<option value="Good">Good</option>
+				<option value="Average">Average</option>
+	      <option value="Poor">Poor</option>
+	      <option value="Terrible">Terrible</option>
+			</select>
+			<br>
+
+	    <h2><li>How likely is it that you could recommend our website to a friend?</li></h2>
+	    <input type="radio" name="recommend" id="vlikely" value="vlikely">
+	    <label for="vlikely">Very likely</label><br>
+	    <input type="radio" name="recommend" id="likely" value="likely">
+	    <label for="likely">Likely</label><br>
+	    <input type="radio" name="recommend" id="unlikely" value="unlikely">
+	    <label for="unlikely">Unlikey</label>
+			<br>
+
+	    <h2><li>How important is it that a store representative be available online to answer questions directly through a chatbox?</li></h2>
+			<br>
+	    <div class="wrap">
+
+	<!--Code taken from https://stackoverflow.com/questions/26612700/ticks-for-type-range-html-input-->
+				<label>Strongly Disagree</label><input name="chatbox" type="range" list="tickmarks" min="0" max="9" style="color: black;"><label>Strongly Agree</label>
+				<datalist id="tickmarks">
+					<option value="0" label="0"></option>
+					<option value="1" label="1"></option>
+					<option value="2" label="2"></option>
+					<option value="3" label="3"></option>
+					<option value="4" label="4"></option>
+					<option value="5" label="5"></option>
+					<option value="6" label="6"></option>
+					<option value="7" label="7"></option>
+					<option value="8" label="8"></option>
+					<option value="9" label="9"></option>
+					<option value="6" label="10"></option>
+				</datalist>
+			</ol>
+
+
+		</div>
+		<h2> Please feel free to share any comments you might have about your experience at <a href="https://www.urbanoutfitters.com">Urban Outfitters!</a> </h2>
+		<textarea rows="5" cols="30" name="comments"></textarea>
+
+			<br>
+			<button type="submit" class="block" id="bb">Submit your questionnaire</button>
+				<p id="thanks"></p>
+			</div>
+
+		</form>
+		</div>
+
+	<footer>
+  <p id="signature">Site created by Elise Cloutier</p>
+</footer>
+
+<script src="/assets/action.js"></script>
+
+</body>
+</html>
