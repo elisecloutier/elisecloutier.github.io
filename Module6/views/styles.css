@@ -1,0 +1,51 @@
+
+body {
+  background-color: #BDCED6;
+  align: center;
+  font-family: Arial;
+
+}
+p{
+	font-family: Raleway;
+	font-size: 23px;
+	padding-bottom: 20px;
+	color: #444155;
+}
+h1{
+	font-family: Raleway;
+	font-weight: 800;
+	color: #444155;
+}
+h3{
+	font-family: Raleway;
+	font-weight: 800;
+	color: #444155;
+	}
+h2{
+	font-family: Raleway;
+	font-weight: 800;
+	color: #444155;
+}
+
+#signature {
+	font-family: Raleway;
+  text-align: center;
+  color: black;
+  font-style: italic;
+  font-size: 75%;
+}
+
+
+.block {
+  display: block;
+  width: 40%;
+  border: none;
+  background-color: #453B49;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+  color: white;
+  margin: auto;
+  display: block;
+}
